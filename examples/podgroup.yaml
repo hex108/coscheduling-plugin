@@ -1,0 +1,6 @@
+apiVersion: scheduling.sigs.dev/v1alpha2
+kind: PodGroup
+metadata:
+  name: podgroup1
+spec:
+  minMember: 3

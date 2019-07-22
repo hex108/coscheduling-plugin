@@ -1,0 +1,27 @@
+{
+  "kind": "KubeSchedulerConfiguration",
+  "apiVersion": "kubescheduler.config.k8s.io/v1alpha1",
+  "clientConnection": {
+    "kubeconfig": "/var/run/kubernetes/admin.kubeconfig"
+  },
+  "leaderElection": {
+    "leaderElect": false
+  },
+  "plugins": {
+    "permit": {
+      "enabled": [
+        {
+          "name": "coscheduling"
+        }
+      ]
+    }
+  },
+  "pluginConfig": [
+    {
+      "name": "coscheduling",
+      "args": {
+        "kube_config": "/var/run/kubernetes/admin.kubeconfig"
+      }
+    }
+  ]
+}

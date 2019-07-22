@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: nginx
+      annotations:
+        scheduling.k8s.io/group-name: "podgroup1"
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+          resources:
+            requests:
+              memory: "1000Mi"
+              cpu: "1"
