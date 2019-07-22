@@ -2,7 +2,7 @@
 
 Based on the great work of Kubernetes [new scheduler framework](https://github.com/kubernetes/enhancements/blob/master/keps/sig-scheduling/20180409-scheduling-framework.md) and [kube-batch](https://github.com/kubernetes-sigs/kube-batch), it is very promising to impelment [coscheduling](https://github.com/kubernetes/enhancements/tree/master/keps/sig-scheduling) feature(or named [Gang scheduling](https://en.wikipedia.org/wiki/Gang_scheduling)). And this coscheduling plugin is for this purpose. It is just a **POC**(proof of concept) now. We will design and discuss more about it.
 
-##Design and implementation
+## Design and implementation
 
 It is implemented using [PodGroup](https://github.com/kubernetes-sigs/kube-batch/blob/master/pkg/apis/scheduling/v1alpha2/types.go#L89) in kube-batch and [permit plugin](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/framework/v1alpha1/interface.go#L202) in Kubernetes new framework now.  In the futher, we might re-design a new `PodGroup` that includes `WaitTimeout` and other attributes.
 
