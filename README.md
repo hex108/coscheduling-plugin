@@ -27,7 +27,7 @@ It is implemented using [PodGroup](https://github.com/kubernetes-sigs/kube-batch
     ```
     # kill XXX   # XXX is the pid of the default scheduler
     # go build -o ./coscheduling ./main.go
-    # ./coscheduling --v=5 --config ./hack/config.json --leader-elect=false --kubeconfig /var/run/kubernetes/scheduler.kubeconfig --feature-gates=AllAlpha=false --master=https://localhost:6443
+    # ./coscheduling --v=5 --config ./hack/config.json
     ```
 
 4. Test
